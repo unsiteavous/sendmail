@@ -73,25 +73,7 @@ Il faut pour cela créer un (faux) serveur de mail, pour que la fonction [`mail(
 
 	5. Relancer ensuite wamp.
 
-## tester un envoi mail 
-```php
-<?php
-$to      = 'Email@destinataire.fr';
-$subject = 'le sujet';
-$message = 'Bonjour ! ça fonctionne !';
-$headers = 'From: email@envoi.fr' . "\r\n" .
-'Reply-To: email@envoi.fr' . "\r\n" .
-'X-Mailer: PHP/' . phpversion();
 
-$test = mail($to, $subject, $message, $headers);
-
-if ($test) {
-  echo "le mail a bien été envoyé.";
-} else{
-  var_dump($test); // reverra la valeur de la fonction mail, probablement false. Aller voir dans ce cas le fichier error.log dans C://wamp/sendmail/
-}
-?>
-```
 
 **SI ÇA NE MARCHE TOUJOURS PAS :** \
 Aller dans `C:\wamp64\bin\php\php__LA_VERSION_DE_PHP_QU'ON_UTILISE__`
@@ -99,10 +81,9 @@ Et faire les mêmes modifs que ci-dessus dans le php.ini.
 
 </details>
 
-
 ## Installer Maildev
 
-<details open>
+<details>
   <summary>Lire l'installation de maildev</summary>
 
 On peut aussi choisir de faire autrement, avec maildev, qui permet d'attraper tous les mails qui veulent sortir, et de les afficher dans une interface de lecture des mails. Cela permet de simuler l'envoi et la réception des mails, sans se prendre la tête avec les adresses mails renseignées : absolument toutes les adresses mails seront attrapées.
@@ -174,3 +155,24 @@ Modifiez la section comme suit :
 
 Une fois que ce fichier est modifié, pensez à relancer les services de wamp.
 </details>
+
+
+## tester un envoi mail 
+```php
+<?php
+$to      = 'Email@destinataire.fr';
+$subject = 'le sujet';
+$message = 'Bonjour ! ça fonctionne !';
+$headers = 'From: email@envoi.fr' . "\r\n" .
+'Reply-To: email@envoi.fr' . "\r\n" .
+'X-Mailer: PHP/' . phpversion();
+
+$test = mail($to, $subject, $message, $headers);
+
+if ($test) {
+  echo "le mail a bien été envoyé.";
+} else{
+  var_dump($test); // reverra la valeur de la fonction mail, probablement false. Aller voir dans ce cas le fichier error.log dans C://wamp/sendmail/
+}
+?>
+```
