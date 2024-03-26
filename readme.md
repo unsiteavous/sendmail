@@ -13,7 +13,8 @@ Il faut pour cela créer un (faux) serveur de mail, pour que la fonction [`mail(
 	ensuite, faire comme la doc le dit :
 
 	1. Dézipper le dossier dans c://wamp/sendmail/
-	2. Modifier le fichier sendmail.ini comme suit :
+	2. Il va vous falloir une adresse mail pour faire fonctionner sendmail. Si vous souhaitez utiliser une adresse gmail, il vous faudra un mot de passe d'application. Pour cela, suivez [ce tuto](https://www.journaldufreenaute.fr/comment-creer-des-mots-de-passe-specifiques-a-une-application-dans-gmail/).
+	3. Modifier le fichier sendmail.ini comme suit :
 
     ```
 		[sendmail] 
@@ -31,7 +32,7 @@ Il faut pour cela créer un (faux) serveur de mail, pour que la fonction [`mail(
 		force_recipient= 
 		hostname=
     ```
-	3. Ensuite, cliquer sur l'icone de wamp, -> PHP -> php.ini.\
+	4. Ensuite, cliquer sur l'icone de wamp, -> PHP -> php.ini.\
     *Vous pouvez voir les différentes versions de PHP que vous utilisez en cliquant sur* wamp -> PHP -> Afficher l'utilisation des versions PHP :
     ![alt text](img/image.png)
     Vous modifierez les différents `php.ini` comme suit :
@@ -67,7 +68,7 @@ Il faut pour cela créer un (faux) serveur de mail, pour que la fonction [`mail(
                 ; mail.log = syslog
     ```
 
-	4. Relancer ensuite wamp.
+	5. Relancer ensuite wamp.
 
 ## tester un envoi mail 
 ```php
