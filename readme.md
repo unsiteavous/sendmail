@@ -13,7 +13,7 @@ Il faut pour cela créer un (faux) serveur de mail, pour que la fonction [`mail(
 	ensuite, faire comme la doc le dit :
 
 	1. Dézipper le dossier dans c://wamp/sendmail/
-	2. Il va vous falloir une adresse mail pour faire fonctionner sendmail. Si vous souhaitez utiliser une adresse gmail, il vous faudra un mot de passe d'application. Pour cela, suivez [ce tuto](https://www.journaldufreenaute.fr/comment-creer-des-mots-de-passe-specifiques-a-une-application-dans-gmail/).
+	2. Il va vous falloir une adresse mail pour faire fonctionner sendmail. Si vous souhaitez utiliser une adresse gmail, il vous faudra un mot de passe d'application. Pour cela, suivez [ce tuto](https://www.journaldufreenaute.fr/comment-creer-des-mots-de-passe-specifiques-a-une-application-dans-gmail/), [ou celui-ci](https://support.google.com/mail/answer/185833?hl=fr).
 	3. Modifier le fichier sendmail.ini comme suit :
 
     ```
